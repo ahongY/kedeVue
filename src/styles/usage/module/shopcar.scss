@@ -1,0 +1,218 @@
+@charset "UTF-8";
+
+#shopcar{
+	margin-top:.22rem;
+	//overflow-y:scroll;
+	height:100%;
+	background:#eee;
+	@include flexbox();
+	@include flex-direction(column);
+	header{
+		width:100%;
+		height:.43rem;
+		line-height:.43rem;
+		background: #000;
+		color: #fff;
+		text-align: center;
+		@include border(0 0 1px 0,#969696,solid);
+		margin-bottom:.1rem;
+		p{
+			font-size: .16rem;
+			font-weight: 900;
+			position:relative;
+		}
+		i{
+			font-size:.14rem;
+			position:absolute;
+			right:.11rem;
+			bottom:0
+		}
+	}
+	section.mes{
+		min-height:4.2rem;
+		overflow-y:scroll;
+		.ad{
+			@include flexbox();
+			@include align-items();
+			@include justify-content(space-around);
+			width: 100%;
+			height: 0.31rem;
+			background: #fff;
+			//padding:0 0 0 0.1rem;
+
+			@include border(0 0 1px 0,#969696,solid);
+			span{
+				display:block;
+				width: 14.4%;
+				height: .17rem;
+				line-height:.17rem;
+				border-radius: .05rem;
+				background: #ff7775;
+				color: #fff;
+				font-size: .1rem;
+				text-align:center;
+				
+			}
+			p{
+				text-align:center;
+				width: 77.2%;
+				line-height:.31rem;
+				height:.31rem;
+				font-size: 0.1rem;
+				color: #787878;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				overflow: hidden;
+				padding-right:.1rem;
+			}
+			
+		}
+		ul{
+			
+			width: 100%;
+			height: 100%;
+			@include flexbox();
+			@include flex-direction(column);
+			margin-bottom:.09rem;
+			li{
+				@include flexbox();
+				@include flex-direction();
+				@include justify-content(space-around);
+				height: 1.05rem;
+				width:100%;
+				background-color: #fff;
+				//padding: .12rem .1rem .1rem .1rem;
+				position: relative;
+				padding-top:.12rem;
+				@include border(0 0 1px 0,#ebebeb,solid);
+				.goodsImg{
+					width: 0.58rem;
+					height: 0.58rem;
+					@include border(1px,#ebebeb,solid);
+					//padding:0 .05rem 0 .05rem;
+					img{
+						width: 100%;
+						height: 100%;
+					}
+				}
+				.goodsName{
+					width: 1.50rem;
+					font-size: 0.11rem;
+					font-weight: 600;
+					color: #696969;
+				}
+				.goodsOther{
+					@include flexbox();
+					//@include justify-content(space-around);
+					@include align-items(flex-end)
+					@include flex-direction(column);
+					width: .9rem;
+					//height: 0.54rem;
+					span{
+						font-size: 0.12rem;
+						font-weight: 600;
+					}
+					em{
+						display:block;
+						//width:.81rem;
+						font-size:0.08rem;
+						color: #fe7c7b;
+						border: 1px #fe7c7b solid;
+						margin-bottom:.04rem;
+					}
+				}
+				.carBtn{
+					@include flexbox();
+					@include justify-content(space-around);
+					@include align-items(center)
+					width: 1rem;
+					height: 0.18rem;
+					position: absolute;
+					right: 0.08rem;
+					bottom: 0.07rem;
+					em{
+						display: block;
+						width: 0.17rem;
+						height: 0.17rem;
+						@include border(1px,#888,solid);
+						border-radius: 0.01rem;
+						font-size: 0.08rem;
+						text-align: center;
+						line-height: 0.17rem;
+						color: #888;
+					}
+					em:nth-of-type(2){
+						width: 0.4rem;
+						color: #000;
+						border-color: #d1d1d1;
+					}
+				}
+			}
+			
+		}
+		.coupon{
+			width:100%;
+			height:.75rem;
+			background:#fff;
+			padding:.10rem .11rem;
+			h2{
+				font-size:.13rem;
+
+			}
+			input{
+				margin-left:.06rem;
+				font-size:.12rem;
+				color:#9c9c9c;
+				width:1.79rem;
+				height:.33rem;
+				@include border(10px,#979797,solid,.01rem);
+				border-radius:.005rem;
+				text-align:center;
+			}
+		}
+		.empty{
+			height:.95rem;
+			width:100%;
+		}
+		
+	}
+	section.tot{
+		.total{
+			@include flexbox();
+			@include flex-direction();
+			width:100%;
+			height:.45rem;
+			font-size:.09rem;
+			em{
+				display:block;
+				width:100%;
+				b{
+					font-size:.11rem;
+				}
+			}
+			.totalLeft{
+				width:66.7%;
+				background:#000;
+				color:#e7e7e7;
+				font-size:.09	qrem;
+				padding:.07rem 0 .11rem .11rem;
+				em{
+					
+					display:block;
+				}
+			}
+			.totalRight{
+				@include flexbox();
+				@include justify-content();
+				width:33.3%;
+				height:.45rem;
+				line-height:.45rem;
+				background:#8bc21c;
+				color:#e7e7e7;
+				font-size:.09rem;
+
+			}
+		}
+	}	
+}
+
